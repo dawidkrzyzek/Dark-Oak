@@ -1,0 +1,23 @@
+/* Pin Voiceflow launcher to bottom-right of the viewport on all sizes */
+
+.vfrc-launcher {
+  right: 1rem !important;
+  bottom: 1rem !important;
+  background-color: #e3b214;
+}
+
+.vfrc-launcher__chevron {
+  color: #ffffff;
+}
+
+.vfrc-chat {
+  right: 1rem !important;
+  bottom: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .vfrc-chat {
+    right: 0rem !important;
+    bottom: 0rem !important;
+  }
+}
