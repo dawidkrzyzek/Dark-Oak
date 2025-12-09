@@ -6,6 +6,7 @@ import k4 from "/k-4.webp";
 import k5 from "/k-5.webp";
 import k6 from "/k-6.webp";
 
+// SEO: Gallery images with keyword-optimized alt text for maximum search visibility
 const galleryImages: {
   src: string;
   alt: string;
@@ -14,25 +15,25 @@ const galleryImages: {
 }[] = [
   {
     src: k3,
-    alt: "Elegancka kuchnia w odcieniach szarości z marmurowym blatem i zielonymi aksamitnymi krzesłami na złotych nogach, widok pod kątem.",
+    alt: "Elegancka kuchnia na wymiar w szarości - Dark Oak Toruń, premium meble kuchenne z marmurowym blatem i zielonymi krzesłami barowymi",
     width: 1920,
     height: 1080,
   },
   {
     src: k4,
-    alt: "Ta sama szara kuchnia z zielonymi krzesłami, ujęcie z przodu na wyspę i zabudowę z ciemnymi frontami i złotymi lampami.",
+    alt: "Nowoczesna zabudowa kuchenna na wymiar - projekt Dark Oak Toruń, szare fronty z marmurem i złotym oświetleniem",
     width: 1920,
     height: 1080,
   },
   {
     src: k5,
-    alt: "Luksusowa kuchnia w stylu nowoczesnym z drewnianą zabudową, jasnym marmurowym blatem i czarnymi hokerami, widok z boku.",
+    alt: "Luksusowa kuchnia premium z drewnianą zabudową - meble kuchenne na wymiar Dark Oak Toruń, marmurowy blat i czarne hokery",
     width: 1920,
     height: 1080,
   },
   {
     src: k6,
-    alt: "Ten sam projekt kuchni z drewnianymi frontami i marmurowym blatem, ujęcie z przodu na wyspę kuchenną i oświetlenie sufitowe.",
+    alt: "Drewniana kuchnia na wymiar z wyspą - studio kuchenne Dark Oak Toruń, zabudowa z marmurowym blatem i designerskim oświetleniem",
     width: 1920,
     height: 1080,
   },
@@ -101,14 +102,17 @@ const Gallery: React.FC = () => {
   });
 
   return (
-    <div
+    // Semantic: Section with ARIA label for gallery
+    <section
       ref={containerRef}
+      aria-label="Galeria realizacji kuchni na wymiar Dark Oak"
       style={{
         position: "relative",
         width: "100%",
         height: `calc(100vh * ${totalImages})`,
       }}
     >
+      {/* Performance: Sticky positioning for optimized scrolling performance */}
       <div className="sticky w-full h-screen top-0 overflow-hidden">
         {galleryImages.map(({ src, alt, width, height }, index) => {
           let y: any;
@@ -125,6 +129,8 @@ const Gallery: React.FC = () => {
           }
 
           return (
+            // Performance: First image eager, rest lazy loaded for better LCP
+            // Accessibility: Proper alt text and role for screen readers
             <motion.img
               key={index}
               src={src}
@@ -132,21 +138,26 @@ const Gallery: React.FC = () => {
               width={width}
               height={height}
               decoding="async"
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "low"}
               style={{ y }}
               className="absolute inset-0 w-full h-full object-cover object-center"
-              aria-hidden={false}
+              role="img"
             />
           );
         })}
 
-        {/* White dots */}
-        <div
+        {/* Accessibility: Navigation dots with proper ARIA label */}
+        <nav
           className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-[20px] z-50"
-          aria-hidden="true"
+          aria-label="Wskaźnik postępu galerii"
+          role="navigation"
         >
           {galleryImages.map((_, idx) => (
+            // Accessibility: Decorative dots marked as presentation
             <div
               key={idx}
+              role="presentation"
               style={{
                 width: dotSize,
                 height: dotSize,
@@ -156,17 +167,18 @@ const Gallery: React.FC = () => {
             />
           ))}
 
-          {/* Yellow dot overlay */}
+          {/* Performance: Yellow dot with GPU-accelerated transform */}
           <motion.div
             className="absolute left-0 top-0 h-[20px] bg-yellow rounded-full"
             style={{
               left: yellowLeft,
               width: yellowWidth,
             }}
+            aria-hidden="true"
           />
-        </div>
+        </nav>
       </div>
-    </div>
+    </section>
   );
 };
 

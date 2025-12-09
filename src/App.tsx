@@ -18,6 +18,14 @@ function App() {
 
   return (
     <>
+      {/* Accessibility: Skip to main content link for keyboard navigation */}
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-yellow focus:text-grey focus:px-4 focus:py-2 focus:rounded"
+      >
+        Przejdź do głównej treści
+      </a>
+
       <ReactLenis root options={{ duration: 1.5 }} ref={lenisRef} />
 
       <Navbar
@@ -28,11 +36,15 @@ function App() {
           kontakt: kontaktRef,
         }}
       />
-      <main id="main">
-        <header className="relative isolate h-screen w-full">
+      {/* Semantic: Main content landmark with skip link target */}
+      <main id="main" role="main">
+        {/* SEO: Hero header section with semantic structure */}
+        <header className="relative isolate h-screen w-full" role="banner">
+          {/* Performance: Hero image with eager loading for LCP optimization */}
+          {/* SEO: Keyword-rich alt text describing the hero image */}
           <img
             src="/k-1.webp"
-            alt="Nowoczesna czarna kuchnia z marmurowym blatem i złotym wykończeniem wyspy kuchennej, widok z przodu na trzy białe krzesła barowe."
+            alt="Nowoczesna kuchnia na wymiar Dark Oak Toruń - czarna zabudowa premium z marmurowym blatem i złotymi akcentami, elegancka wyspa kuchenna z białymi krzesłami barowymi"
             fetchPriority="high"
             decoding="async"
             loading="eager"
@@ -43,11 +55,13 @@ function App() {
           <Header />
         </header>
 
-        <section id="about" ref={onasRef} className="max-h-[1100px] bg-grey">
+        {/* SEO: About section with semantic structure and proper ARIA */}
+        <section id="about" ref={onasRef} className="max-h-[1100px] bg-grey" aria-labelledby="about-heading">
           <About />
         </section>
 
-        <section id="gallery" ref={galeriaRef}>
+        {/* SEO: Gallery section with semantic structure */}
+        <section id="gallery" ref={galeriaRef} aria-label="Galeria projektów kuchni na wymiar">
           <Gallery />
         </section>
       </main>
