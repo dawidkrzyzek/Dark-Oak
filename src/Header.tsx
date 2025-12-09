@@ -24,7 +24,7 @@ const Header = () => {
             delay: 2,
           }}
           data-reduce-motion="user"
-          className="w-auto text-yellow font-bold text-[14vw] sm:text-6 md:text-7 lg:text-8 xl:text-9 block mb-8 md:mb-10 tracking-tighter leading-[0.95]"
+          className="w-auto text-yellow font-bold text-[16vw] sm:text-6 md:text-7 lg:text-8 xl:text-9 block mb-8 md:mb-10 tracking-tighter leading-[0.95]"
         >
           {/* SEO: Primary keyword + location */}
           <span className="block">Kuchnie Na Wymiar</span>
