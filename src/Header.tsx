@@ -46,7 +46,7 @@ const Header = () => {
             href="https://wa.me/48669004609"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center gap-3 bg-yellow hover:bg-hover text-grey font-bold text-4 md:text-5 px-5 md:px-12 py-1 md:py-5 rounded-sm transition-all duration-500 hover:shadow-[0_8px_30px_rgba(227,178,20,0.4)] hover:translate-y-[-2px]"
+            className="group inline-flex items-center justify-center gap-3 bg-yellow hover:bg-hover text-grey font-bold text-4 md:text-5 px-10 md:px-12 py-4 md:py-5 rounded-sm transition-all duration-500 hover:shadow-[0_8px_30px_rgba(227,178,20,0.4)] hover:translate-y-[-2px]"
             aria-label="Rozpocznij projekt kuchni na wymiar - kontakt przez WhatsApp"
           >
             <span>Zacznij Projekt</span>
