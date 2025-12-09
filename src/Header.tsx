@@ -28,9 +28,6 @@ const Header = () => {
         >
           {/* SEO: Primary keyword + location */}
           <span className="block">Kuchnie Na Wymiar</span>
-          <span className="block text-white text-[10vw] sm:text-5 md:text-6 lg:text-7 xl:text-8 mt-2 md:mt-4 tracking-tight">
-            Toruń
-          </span>
         </motion.h1>
 
         {/* Premium tagline with delayed entrance */}
