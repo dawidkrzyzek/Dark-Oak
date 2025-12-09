@@ -42,22 +42,35 @@ const Footer: React.FC = () => {
   };
 
   return (
-    // Semantic: Footer with proper landmark role
-    <footer className="bg-grey text-white px-5 py-5" role="contentinfo">
-      <div className="max-w-400 mx-auto">
-        {/* SEO: Contact section with heading hierarchy */}
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Semantic: Form section with article wrapper */}
+    // Semantic: Footer with premium styling
+    <footer className="bg-grey text-white px-5 py-20 md:py-32 border-t border-white/10" role="contentinfo">
+      <div className="max-w-400 mx-auto px-5 md:px-10 lg:px-20">
+        {/* SEO: Premium contact section */}
+        <div className="grid lg:grid-cols-2 gap-16 md:gap-20 items-start">
+          {/* Semantic: Form section with luxury styling */}
           <article>
-            {/* SEO: H2 heading for contact section (proper hierarchy after H1 in header) */}
-            <motion.h2
-              initial={{ opacity: 0, y: "10%" }}
-              whileInView={{ opacity: 1, y: "0%" }}
+            {/* Premium section label */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.5 }}
-              className="text-yellow text-6 lg:text-7 xl:text-8 w-90 sm:w-full mb-5"
+              className="mb-6"
             >
-              Skontaktuj się z nami!
+              <span className="text-yellow/80 text-3 md:text-4 font-medium tracking-[0.2em] uppercase">
+                Kontakt
+              </span>
+            </motion.div>
+
+            {/* SEO: H2 with premium typography */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="text-white text-6 md:text-7 lg:text-8 font-bold mb-8 tracking-tight leading-tight"
+            >
+              Skontaktuj się z nami
             </motion.h2>
 
             {/* Accessibility: Form with proper ARIA attributes and labels */}
@@ -108,7 +121,7 @@ const Footer: React.FC = () => {
                   autoComplete="name"
                   type="text"
                   placeholder="Imię"
-                  className="w-[90vw] xsm:w-full bg-transparent border-b border-white outline-none py-2 text-4 lg:text-5 xl:text-6 placeholder:text-white/50 transition-colors duration-500 ease-in-out focus:border-yellow"
+                  className="w-full bg-transparent border-b border-white/20 outline-none py-4 text-4 lg:text-5 text-white placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:placeholder:text-white/60"
                 />
               </motion.div>
 
@@ -131,8 +144,8 @@ const Footer: React.FC = () => {
                   type="tel"
                   required
                   autoComplete="tel"
-                  placeholder="Numer"
-                  className="w-[90vw] xsm:w-full bg-transparent border-b border-white outline-none py-2 text-4 lg:text-5 xl:text-6 placeholder:text-white/50 transition-colors duration-500 ease-in-out focus:border-yellow"
+                  placeholder="Numer Telefonu"
+                  className="w-full bg-transparent border-b border-white/20 outline-none py-4 text-4 lg:text-5 text-white placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:placeholder:text-white/60"
                 />
               </motion.div>
 
@@ -155,8 +168,8 @@ const Footer: React.FC = () => {
                   type="email"
                   required
                   autoComplete="email"
-                  placeholder="Email"
-                  className="w-[90vw] xsm:w-full bg-transparent border-b border-white outline-none py-2 text-4 lg:text-5 xl:text-6 placeholder:text-white/50 transition-colors duration-500 ease-in-out focus:border-yellow"
+                  placeholder="Adres Email"
+                  className="w-full bg-transparent border-b border-white/20 outline-none py-4 text-4 lg:text-5 text-white placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:placeholder:text-white/60"
                 />
               </motion.div>
 
@@ -177,9 +190,9 @@ const Footer: React.FC = () => {
                   id="message"
                   name="message"
                   required
-                  placeholder="Jak możemy pomóc?"
-                  rows={4}
-                  className="w-[90vw] xsm:w-full bg-transparent border border-white outline-none pl-2 text-4 lg:text-5 xl:text-6 resize-none placeholder:text-white/50 transition-colors duration-500 ease-in-out focus:border-yellow"
+                  placeholder="Opisz swój projekt kuchni..."
+                  rows={5}
+                  className="w-full bg-white/[0.02] border border-white/20 rounded-sm outline-none px-5 py-4 text-4 lg:text-5 text-white resize-none placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:bg-white/[0.04] focus:placeholder:text-white/60"
                 ></textarea>
               </motion.div>
 
@@ -197,7 +210,7 @@ const Footer: React.FC = () => {
                   type="submit"
                   value="submit"
                   disabled={submitting}
-                  className="bg-yellow w-[90vw] transition-colors xsm:w-full cursor-pointer text-4 lg:text-5 xl:text-6 text-grey font-semibold px-8 py-2 rounded-full duration-500 hover:bg-hover"
+                  className="w-full bg-yellow hover:bg-hover text-grey font-bold text-4 md:text-5 px-10 py-4 md:py-5 rounded-sm transition-all duration-500 hover:shadow-[0_8px_30px_rgba(227,178,20,0.3)] hover:translate-y-[-1px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                 >
                   {btnText}
                 </button>
@@ -208,157 +221,205 @@ const Footer: React.FC = () => {
               </div>
             </motion.form>
           </article>
-          {/* Semantic: Contact information section with proper address markup */}
+
+          {/* Semantic: Premium contact info section */}
           <motion.aside
-            className="flex w-[90vw] xsm:w-full flex-col justify-center gap-10 md:gap-20 items-center text-4 lg:text-5 xl:text-6 text-white"
+            className="flex w-full flex-col justify-start gap-8 md:gap-10 items-start text-white"
             aria-label="Informacje kontaktowe Dark Oak"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={{
               hidden: { opacity: 0 },
               visible: {
                 opacity: 1,
                 transition: {
-                  duration: 1,
-                  ease: "easeInOut",
-                  staggerChildren: 0.3,
+                  duration: 1.2,
+                  ease: "easeOut",
+                  staggerChildren: 0.15,
                 },
               },
             }}
           >
-            {/* SEO: Semantic tel link for phone number with microdata */}
+            {/* Premium contact info heading */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeOut" },
+                },
+              }}
+            >
+              <h3 className="text-white/60 text-3 md:text-4 font-medium tracking-wider uppercase mb-6">
+                Informacje Kontaktowe
+              </h3>
+            </motion.div>
+
+            {/* SEO: Premium phone link */}
             <motion.a
               href="tel:+48669004609"
-              className="cursor-pointer hover:text-yellow transition-colors duration-500"
+              className="group flex items-center gap-4 text-4 md:text-5 font-medium hover:text-yellow transition-colors duration-500"
               aria-label="Zadzwoń do Dark Oak: 669 004 609"
               itemProp="telephone"
               variants={{
-                hidden: { opacity: 0 },
+                hidden: { opacity: 0, x: -20 },
                 visible: {
                   opacity: 1,
-                  transition: { duration: 1, ease: "easeInOut" },
+                  x: 0,
+                  transition: { duration: 1, ease: "easeOut" },
                 },
               }}
             >
-              669 004 609
+              <span className="text-yellow/60 group-hover:text-yellow transition-colors duration-500">☎</span>
+              <span>+48 669 004 609</span>
             </motion.a>
 
-            {/* SEO: Semantic mailto link with microdata */}
+            {/* SEO: Premium email link */}
             <motion.a
               href="mailto:biuro@darkoak.pl"
-              className="cursor-pointer hover:text-yellow transition-colors duration-500"
+              className="group flex items-center gap-4 text-4 md:text-5 font-medium hover:text-yellow transition-colors duration-500"
               aria-label="Wyślij email do Dark Oak: biuro@darkoak.pl"
               itemProp="email"
               variants={{
-                hidden: { opacity: 0 },
+                hidden: { opacity: 0, x: -20 },
                 visible: {
                   opacity: 1,
-                  transition: { duration: 1, ease: "easeInOut" },
+                  x: 0,
+                  transition: { duration: 1, ease: "easeOut" },
                 },
               }}
             >
-              biuro@darkoak.pl
+              <span className="text-yellow/60 group-hover:text-yellow transition-colors duration-500">✉</span>
+              <span>biuro@darkoak.pl</span>
             </motion.a>
 
+            {/* Premium business info */}
             <motion.div
               variants={{
-                hidden: { opacity: 0 },
+                hidden: { opacity: 0, x: -20 },
                 visible: {
                   opacity: 1,
-                  transition: { duration: 1, ease: "easeInOut" },
+                  x: 0,
+                  transition: { duration: 1, ease: "easeOut" },
                 },
               }}
+              className="text-4 md:text-4 text-white/60 space-y-2 pt-4 border-t border-white/10"
             >
-              <div>
-                <p>
-                  <span className="text-yellow font-bold">NIP</span> 865 240 69
-                  10
-                </p>
-                <p>
-                  <span className="text-yellow font-bold">REGON</span> 381130237
-                </p>
-              </div>
+              <p>
+                <span className="text-yellow/80 font-bold">NIP:</span> 865 240 69 10
+              </p>
+              <p>
+                <span className="text-yellow/80 font-bold">REGON:</span> 381130237
+              </p>
             </motion.div>
-            {/* SEO: Social media section with proper navigation landmark */}
+
+            {/* SEO: Premium social media section */}
             <motion.nav
               variants={{
-                hidden: { opacity: 0 },
+                hidden: { opacity: 0, y: 20 },
                 visible: {
                   opacity: 1,
-                  transition: { duration: 1, ease: "easeInOut" },
+                  y: 0,
+                  transition: { duration: 1, ease: "easeOut" },
                 },
               }}
-              className="flex items-center justify-center gap-15 lg:gap-20 xl:gap-30"
+              className="flex items-center gap-5 pt-6"
               aria-label="Social media Dark Oak"
             >
-              {/* Accessibility: Enhanced social media links with descriptive labels */}
+              {/* Premium social media links */}
               <a
                 href="https://www.instagram.com/darkoak7/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Odwiedź profil Instagram Dark Oak - kuchnie na wymiar Toruń"
+                className="group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 border border-white/20 rounded-sm hover:border-yellow/50 hover:bg-yellow/5 transition-all duration-500"
               >
                 <img
                   src="/instagram-icon.svg"
                   alt="Instagram Dark Oak"
                   decoding="async"
                   loading="lazy"
-                  className="w-15 h-15 lg:w-21 lg:h-21"
+                  className="w-6 h-6 md:w-7 md:h-7 opacity-60 group-hover:opacity-100 transition-opacity duration-500"
                 />
               </a>
 
-              {/* TikTok */}
               <a
                 href="https://www.tiktok.com/@dark.oak.home.meb"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Zobacz filmy Dark Oak na TikTok - realizacje kuchni na wymiar"
+                className="group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 border border-white/20 rounded-sm hover:border-yellow/50 hover:bg-yellow/5 transition-all duration-500"
               >
                 <img
                   src="/tiktok-icon.svg"
                   alt="TikTok Dark Oak"
                   decoding="async"
                   loading="lazy"
-                  className="w-16 h-16 lg:w-23 lg:h-23"
+                  className="w-7 h-7 md:w-8 md:h-8 opacity-60 group-hover:opacity-100 transition-opacity duration-500"
                 />
               </a>
 
-              {/* Facebook */}
               <a
                 href="https://www.facebook.com/profile.php?id=61582880040440"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Polub stronę Facebook Dark Oak - studio kuchenne Toruń"
+                className="group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 border border-white/20 rounded-sm hover:border-yellow/50 hover:bg-yellow/5 transition-all duration-500"
               >
                 <img
                   src="/facebook-icon.svg"
                   alt="Facebook Dark Oak"
                   decoding="async"
                   loading="lazy"
-                  className="w-13 h-13 lg:w-20 lg:h-20"
+                  className="w-5 h-5 md:w-6 md:h-6 opacity-60 group-hover:opacity-100 transition-opacity duration-500"
                 />
               </a>
             </motion.nav>
           </motion.aside>
         </div>
-        {/* SEO: Location map section with semantic markup and address data */}
-        <section className="mt-16" aria-labelledby="location-heading">
-          <h3 id="location-heading" className="sr-only">
-            Lokalizacja Dark Oak - Toruń
-          </h3>
-          {/* Semantic: Figure with address information for SEO */}
-          <figure className="w-full">
-            {/* Performance: Lazy loading iframe, Accessibility: Descriptive title */}
+
+        {/* SEO: Premium location map section */}
+        <section className="mt-20 md:mt-24 pt-20 md:pt-24 border-t border-white/10" aria-labelledby="location-heading">
+          {/* Premium map heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <span className="text-yellow/80 text-3 md:text-4 font-medium tracking-[0.2em] uppercase mb-4 block">
+              Nasza Lokalizacja
+            </span>
+            <h3 id="location-heading" className="text-white text-5 md:text-6 font-bold tracking-tight">
+              Odwiedź Nas w Toruniu
+            </h3>
+          </motion.div>
+
+          {/* Premium map container */}
+          <motion.figure
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="w-full relative rounded-sm overflow-hidden"
+          >
+            {/* Subtle border */}
+            <div className="absolute inset-0 border border-white/10 rounded-sm z-10 pointer-events-none" />
+
+            {/* Performance: Lazy loading iframe */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2398.1965027482197!2d18.702621699999998!3d53.052776599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ccd74543ae8fd%3A0xba243ff653a38966!2sDark%20Oak!5e0!3m2!1sen!2suk!4v1758657419347!5m2!1sen!2suk"
-              className="w-full h-96 border-0"
+              className="w-full h-[400px] md:h-[500px] rounded-sm"
               loading="lazy"
               allowFullScreen
               title="Mapa lokalizacji Dark Oak - Kuchnie na Wymiar, Wapienna 6/8 p.109, 87-100 Toruń"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-            {/* SEO: Figcaption with structured address data */}
+
+            {/* SEO: Structured address data */}
             <figcaption className="sr-only" itemScope itemType="https://schema.org/PostalAddress">
               <span itemProp="name">Dark Oak - Kuchnie na Wymiar</span>
               <span itemProp="streetAddress">Wapienna 6/8 p.109</span>
@@ -366,8 +427,21 @@ const Footer: React.FC = () => {
               <span itemProp="addressLocality">Toruń</span>
               <span itemProp="addressCountry">Polska</span>
             </figcaption>
-          </figure>
+          </motion.figure>
         </section>
+
+        {/* Premium copyright */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="mt-20 md:mt-24 pt-10 border-t border-white/10 text-center"
+        >
+          <p className="text-white/40 text-3 md:text-4 font-medium">
+            © {new Date().getFullYear()} Dark Oak. Wszelkie prawa zastrzeżone.
+          </p>
+        </motion.div>
       </div>
     </footer>
   );

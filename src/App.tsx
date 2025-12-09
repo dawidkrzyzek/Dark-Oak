@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Gallery from "./Gallery";
 import Header from "./Header";
 import Navbar from "./Navbar";
+import WhyChooseUs from "./WhyChooseUs";
 
 function App() {
   // Lenis reference (nullable to satisfy TS)
@@ -55,15 +56,18 @@ function App() {
           <Header />
         </header>
 
-        {/* SEO: About section with semantic structure and proper ARIA */}
-        <section id="about" ref={onasRef} className="max-h-[1100px] bg-grey" aria-labelledby="about-heading">
+        {/* Premium: Why Choose Us section */}
+        <WhyChooseUs />
+
+        {/* SEO: About section with semantic structure */}
+        <div id="about" ref={onasRef}>
           <About />
-        </section>
+        </div>
 
         {/* SEO: Gallery section with semantic structure */}
-        <section id="gallery" ref={galeriaRef} aria-label="Galeria projektów kuchni na wymiar">
+        <div id="gallery" ref={galeriaRef}>
           <Gallery />
-        </section>
+        </div>
       </main>
 
       <footer id="contact" ref={kontaktRef}>
