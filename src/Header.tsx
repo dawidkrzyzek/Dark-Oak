@@ -65,32 +65,6 @@ const Header = () => {
           </button>
         </motion.div>
       </div>
-
-      {/* Elegant scroll indicator with animation */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 3.5,
-          ease: "easeOut",
-        }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
-      >
-        <span className="text-white/50 text-2 md:text-3 font-medium tracking-wider uppercase">
-          Przewiń
-        </span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        >
-          <ChevronDown className="w-6 h-6 text-yellow/80" strokeWidth={1.5} />
-        </motion.div>
-      </motion.div>
     </section>
   );
 };
