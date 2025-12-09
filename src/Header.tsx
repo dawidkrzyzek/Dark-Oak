@@ -13,22 +13,6 @@ const Header = () => {
 
       {/* Content container with subtle animations */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-[90rem] mx-auto">
-        {/* Premium subtitle with elegant entrance */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 1.2,
-            ease: [0.25, 0.1, 0.25, 1],
-            delay: 1.5,
-          }}
-          className="mb-6 md:mb-8"
-        >
-          <span className="inline-block text-white/80 text-3 md:text-4 font-medium tracking-[0.3em] uppercase border-b border-yellow/30 pb-2">
-            Premium Studio Kuchenne
-          </span>
-        </motion.div>
-
         {/* SEO: H1 with primary keyword + luxury typography */}
         <motion.h1
           id="main-heading"
