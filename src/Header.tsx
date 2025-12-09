@@ -30,22 +30,6 @@ const Header = () => {
           <span className="block">Kuchnie Na Wymiar</span>
         </motion.h1>
 
-        {/* Premium tagline with delayed entrance */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            duration: 1.2,
-            delay: 2.6,
-            ease: "easeOut",
-          }}
-          className="text-white/70 text-4 md:text-5 lg:text-5 font-medium max-w-160 leading-relaxed mb-12 md:mb-16"
-        >
-          Elegancja, precyzja i najwyższa jakość wykonania.
-          <br className="hidden md:block" />
-          Tworzymy kuchnie, które inspirują.
-        </motion.p>
-
         {/* Premium CTA buttons with staggered animation */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
