@@ -169,7 +169,7 @@ const Footer: React.FC = () => {
                   required
                   autoComplete="email"
                   placeholder="Adres Email"
-                  className="w-full bg-transparent border-b border-white/20 outline-none py-4 text-4 lg:text-5 text-white placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:placeholder:text-white/60"
+                  className="w-[85vw] xsm:w-full bg-transparent border-b border-white/20 outline-none py-4 text-4 lg:text-5 text-white placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:placeholder:text-white/60"
                 />
               </motion.div>
 
