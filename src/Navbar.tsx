@@ -74,12 +74,12 @@ const Navbar: React.FC<NavbarProps> = ({ refs, lenisRef }) => {
       <motion.nav
         role="navigation"
         aria-label="Nawigacja główna"
-        className="fixed w-screen xsm:w-full top-0 left-0 z-40 pointer-events-auto"
+        className="fixed w-full xsm:w-full top-0 left-0 z-40 pointer-events-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
       >
-        <div className="flex items-center justify-between w-screen px-5 md:px-20 lg:px-30 mx-auto py-5">
+        <div className="flex items-center justify-between w-full px-5 md:px-20 lg:px-30 mx-auto py-5">
           {/* Logo */}
           <a
             href="https://darkoak.pl/"
