@@ -74,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ refs, lenisRef }) => {
       <motion.nav
         role="navigation"
         aria-label="Nawigacja główna"
-        className="fixed w-screen xsm:w-screen top-0 left-0 z-40 pointer-events-auto"
+        className="fixed w-screen xsm:w-full top-0 left-0 z-40 pointer-events-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
