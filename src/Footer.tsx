@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
               viewport={{ once: true, amount: 0.5 }}
-              className="text-white w-screen text-6 md:text-7 lg:text-8 font-bold mb-8 tracking-tight leading-tight"
+              className="text-white text-6 md:text-7 lg:text-8 font-bold mb-8 tracking-tight leading-tight"
             >
               Skontaktuj się z nami
             </motion.h2>
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                   autoComplete="name"
                   type="text"
                   placeholder="Imię"
-                  className="w-full bg-transparent border-b border-white/20 outline-none py-4 text-4 lg:text-5 text-white placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:placeholder:text-white/60"
+                  className="w-screen bg-transparent border-b border-white/20 outline-none py-4 text-4 lg:text-5 text-white placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:placeholder:text-white/60"
                 />
               </motion.div>
 
