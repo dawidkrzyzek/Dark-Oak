@@ -137,15 +137,6 @@ html.lenis body {
     hyphens: auto;
   }
 
-  /* Fix button centering - ensure equal padding on both sides */
-  button,
-  a[class*="inline-flex"] {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   /* Fix footer heading text cutoff */
   footer h2 {
     word-wrap: break-word;
