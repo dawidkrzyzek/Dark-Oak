@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
               viewport={{ once: true, amount: 0.5 }}
-              className="text-white w-[85vw] xsm:w-full text-6 md:text-7 lg:text-8 font-bold mb-8 tracking-tight leading-tight"
+              className="text-white w-[90vw] xsm:w-full text-6 md:text-7 lg:text-8 font-bold mb-8 tracking-tight leading-tight"
             >
               Skontaktuj się z nami
             </motion.h2>
