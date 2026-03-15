@@ -295,7 +295,7 @@ const Navbar: React.FC<NavbarProps> = ({ refs, lenisRef }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Otwórz WhatsApp, aby rozpocząć projekt"
-                      className="bg-yellow hover:bg-hover duration-500 transition-colors cursor-pointer text-[2rem] rounded-full text-center px-5 py-2 font-bold inline-flex items-center justify-center no-underline text-grey"
+                      className="bg-yellow hover:bg-hover text-grey font-bold text-4 md:text-5 px-10 md:px-12 py-4 md:py-5 rounded-sm transition-all duration-500 hover:shadow-[0_8px_30px_rgba(227,178,20,0.4)] hover:translate-y-[-2px]"
                     >
                       Zacznij Projekt
                     </a>
