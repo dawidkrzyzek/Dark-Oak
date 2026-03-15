@@ -123,3 +123,55 @@ html.lenis body {
     will-change: auto;
   }
 }
+
+/* Mobile responsiveness fixes for Galaxy S25 and similar small screens */
+@media (max-width: 400px) {
+  /* Fix text overflow in feature cards - prevent words from extending outside containers */
+  article p,
+  article h3,
+  .text-4,
+  .text-5,
+  .text-6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Fix button centering - ensure equal padding on both sides */
+  button,
+  a[class*="inline-flex"] {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Fix footer heading text cutoff */
+  footer h2 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Fix form elements alignment - center with equal margins */
+  form input,
+  form textarea {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Ensure form container has equal padding */
+  form {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Fix container padding for small screens */
+  footer > div {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
