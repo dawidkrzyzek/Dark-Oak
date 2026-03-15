@@ -210,7 +210,7 @@ const Footer: React.FC = () => {
                   type="submit"
                   value="submit"
                   disabled={submitting}
-                  className="w-full bg-yellow hover:bg-hover text-grey font-bold text-4 md:text-5 px-10 py-4 md:py-5 rounded-sm transition-all duration-500 hover:shadow-[0_8px_30px_rgba(227,178,20,0.3)] hover:translate-y-[-1px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                  className="w-[85vw] xsm:w-full bg-yellow hover:bg-hover text-grey font-bold text-4 md:text-5 px-10 py-4 md:py-5 rounded-sm transition-all duration-500 hover:shadow-[0_8px_30px_rgba(227,178,20,0.3)] hover:translate-y-[-1px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                 >
                   {btnText}
                 </button>
