@@ -170,7 +170,7 @@ const WhyChooseUs = () => {
               const contactSection = document.getElementById("contact");
               contactSection?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group inline-flex items-center gap-3 bg-yellow hover:bg-hover text-grey font-bold text-4 md:text-5 px-12 py-4 rounded-sm transition-all duration-500 hover:shadow-[0_8px_30px_rgba(227,178,20,0.3)] hover:translate-y-[-2px]"
+            className="group inline-flex items-center gap-3 bg-yellow hover:bg-hover text-grey font-bold text-4 md:text-5 mx-10 px-12 py-4 rounded-sm transition-all duration-500 hover:shadow-[0_8px_30px_rgba(227,178,20,0.3)] hover:translate-y-[-2px]"
             aria-label="Skontaktuj się z Dark Oak - przejdź do formularza kontaktowego"
           >
             <span>Porozmawiajmy o Twojej Kuchni</span>
