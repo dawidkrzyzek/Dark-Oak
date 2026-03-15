@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
   return (
     // Semantic: Footer with premium styling
     <footer className="bg-grey text-white px-5 py-20 md:py-32 border-t border-white/10" role="contentinfo">
-      <div className="max-w-400 w-full px-5 md:px-10 lg:px-20">
+      <div className="max-w-400 mx-auto px-0 xsm:px-5 md:px-10 lg:px-20">
         {/* SEO: Premium contact section */}
         <div className="grid lg:grid-cols-2 gap-16 md:gap-20 items-start">
           {/* Semantic: Form section with luxury styling */}
