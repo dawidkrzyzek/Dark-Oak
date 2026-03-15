@@ -139,7 +139,7 @@ const Navbar: React.FC<NavbarProps> = ({ refs, lenisRef }) => {
                 href="https://wa.me/48669004609"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow hover:bg-hover duration-500 cursor-pointer rounded-full px-5 py-1 font-bold text-white"
+                className="bg-yellow hover:bg-hover duration-500 cursor-pointer rounded-sm px-5 py-1 font-bold text-white"
                 aria-label="Otwórz WhatsApp, aby rozpocząć projekt"
               >
                 {" "}
