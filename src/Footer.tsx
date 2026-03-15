@@ -192,7 +192,7 @@ const Footer: React.FC = () => {
                   required
                   placeholder="Opisz swój projekt kuchni..."
                   rows={5}
-                  className="w-full bg-white/[0.02] border border-white/20 rounded-sm outline-none px-5 py-4 text-4 lg:text-5 text-white resize-none placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:bg-white/[0.04] focus:placeholder:text-white/60"
+                  className="w-[85vw] xsm:w-full bg-white/[0.02] border border-white/20 rounded-sm outline-none px-5 py-4 text-4 lg:text-5 text-white resize-none placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:bg-white/[0.04] focus:placeholder:text-white/60"
                 ></textarea>
               </motion.div>
 
