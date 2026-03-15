@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                   autoComplete="name"
                   type="text"
                   placeholder="Imię"
-                  className="w-screen bg-transparent border-b border-white/20 outline-none py-4 text-4 lg:text-5 text-white placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:placeholder:text-white/60"
+                  className="w-80vw bg-transparent border-b border-white/20 outline-none py-4 text-4 lg:text-5 text-white placeholder:text-white/40 transition-all duration-500 ease-out focus:border-yellow focus:placeholder:text-white/60"
                 />
               </motion.div>
 
